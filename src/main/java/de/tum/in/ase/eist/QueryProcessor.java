@@ -14,10 +14,10 @@ public class QueryProcessor {
         } else if (query.contains("name")) {
             return "MyTeam";
         } else if (query.contains("what is your name")) {
-            return "sthng";
+            return "Dennis";
     // TODO extend the programm here
     } else {
-            return "hello Dennis";
+            return "Dennis";
         }
     }
 }
