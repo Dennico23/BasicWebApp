@@ -2,6 +2,9 @@ package de.tum.in.ase.eist;
 
 import org.springframework.stereotype.Service;
 
+import java.util.Arrays;
+import java.util.stream.Collectors;
+
 @Service
 public class QueryProcessor {
 
@@ -15,8 +18,9 @@ public class QueryProcessor {
             return "752";
         } else if (query.contains("what is your name")) {
             return "Dennis";
-        } else if (query.contains("what is 1 plus 17")) {
-            return "18";
+        } else if (query.contains("plus")) {
+            String[] reso = (String[]) Arrays.stream(query.split(" ")).toArray();
+            return (Integer.parseInt(reso[2]) + Integer.parseInt(reso[4])) + "";
         } else if (query.contains("what is 2 plus 4")) {
             return "6";
         } else if (query.contains("what is 14 plus 4")) {
