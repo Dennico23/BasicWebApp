@@ -18,6 +18,9 @@ public class QueryProcessor {
             return "752";
         } else if (query.contains("what is your name")) {
             return "Dennis";
+        } else if (query.contains("plus%20")) {
+            String[] reso = (String[]) Arrays.stream(query.split("%20")).toArray();
+            return (Integer.parseInt(reso[2]) + Integer.parseInt(reso[4])) + "";
         } else if (query.contains("plus")) {
             String[] reso = (String[]) Arrays.stream(query.split(" ")).toArray();
             return (Integer.parseInt(reso[2]) + Integer.parseInt(reso[4])) + "";
